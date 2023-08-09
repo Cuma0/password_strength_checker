@@ -6,6 +6,12 @@ void main() {
   runApp(const MyApp());
 }
 
+// Password Strength Checker 🔥🚀
+
+// github: https://github.com/Cuma0 👨‍💻
+
+// instagram: @artinflutterland 👋
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 

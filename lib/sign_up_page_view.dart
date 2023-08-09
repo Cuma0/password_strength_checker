@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
-import 'components/fade_in_animation_widget.dart';
-import 'utils/color_scheme.dart';
-import 'utils/context_extensions.dart';
-import 'utils/text_theme.dart';
 
+import 'components/fade_in_animation_widget.dart';
 import 'components/outlined_button_widget.dart';
 import 'components/square_button_widget.dart';
 import 'components/text_form_widget.dart';
+import 'utils/color_scheme.dart';
+import 'utils/context_extensions.dart';
+import 'utils/text_theme.dart';
 
 class SignUpPageView extends StatefulWidget {
   const SignUpPageView({super.key});
@@ -88,11 +88,13 @@ class _SignUpPageViewState extends State<SignUpPageView> {
       isUp: true,
       milliseconds: 500,
       widget: squareButtonWidget(
-        context: context,
-        buttonColor: ColorSchemeLight.instance!.lightGrey,
-        icon: Icons.arrow_back_ios_new_rounded,
-        iconColor: ColorSchemeLight.instance!.lightBlack,
-      ),
+          context: context,
+          buttonColor: ColorSchemeLight.instance!.lightGrey,
+          icon: Icons.arrow_back_ios_new_rounded,
+          iconColor: ColorSchemeLight.instance!.lightBlack,
+          onPressed: () {
+            Navigator.pop(context);
+          }),
     );
   }
 
@@ -197,10 +199,12 @@ class _SignUpPageViewState extends State<SignUpPageView> {
       widget: Align(
         alignment: Alignment.centerRight,
         child: squareButtonWidget(
-            context: context,
-            icon: Icons.arrow_forward_ios_rounded,
-            buttonColor: ColorSchemeLight.instance!.blue,
-            iconColor: Colors.white),
+          context: context,
+          icon: Icons.arrow_forward_ios_rounded,
+          buttonColor: ColorSchemeLight.instance!.blue,
+          iconColor: Colors.white,
+          onPressed: () {},
+        ),
       ),
     );
   }
